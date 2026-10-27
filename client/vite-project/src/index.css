@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+:root {
+  --bg-deep: #07080d;
+  --bg-panel: #0f1118;
+  --bg-elevated: #161922;
+  --border: rgb(255 255 255 / 8%);
+  --border-strong: rgb(255 255 255 / 14%);
+  --text: #eef0f6;
+  --text-muted: #8b90a3;
+  --accent: #3dd6c3;
+  --accent-dim: rgb(61 214 195 / 14%);
+  --accent-glow: rgb(61 214 195 / 35%);
+  --danger: #ff6b6b;
+  --danger-dim: rgb(255 107 107 / 12%);
+  --success: #6ee7a8;
+  --success-dim: rgb(110 231 168 / 12%);
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg-deep);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgb(61 214 195 / 12%), transparent),
+    radial-gradient(circle at 100% 0%, rgb(99 102 241 / 8%), transparent 40%),
+    var(--bg-deep);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--accent-dim);
+  color: var(--text);
+}
